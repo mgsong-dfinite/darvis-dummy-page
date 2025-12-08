@@ -8,7 +8,7 @@ export default function App() {
                 <div className="sidebar-content">
                     {/* Logo */}
                     <div className="logo-container">
-                        <img src="/src/assets/darvis-logo.png" alt="Logo" className="logo-placeholder" />
+                        <img src="/darvis-logo.png" alt="Logo" className="logo-placeholder" />
                     </div>
 
                     {/* Status */}
@@ -34,7 +34,7 @@ export default function App() {
             {/* Right Image Area - 80% */}
             <div className="image-area">
                 <div className="image-container">
-                    <img src="/src/assets/dravis-demo.png" alt="Main" className="main-image" />
+                    <img src="/dravis-demo.png" alt="Main" className="main-image" />
                 </div>
             </div>
         </div>
