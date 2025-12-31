@@ -5,7 +5,7 @@ function Button({ children, onClick }: React.PropsWithChildren<{ onClick?: () =>
   return (
     <button
       onClick={onClick}
-      className="relative rounded-[4px] shrink-0 hover:bg-[rgba(255,255,255,0.05)] transition-colors cursor-pointer"
+      className="relative rounded-[4px] shrink-0 hover:bg-[rgba(255,255,255,0.05)] transition-colors cursor-pointer w-full md:w-auto"
     >
       <div className="content-stretch flex flex-col items-center justify-center overflow-clip px-[22px] py-[8px] relative rounded-[inherit]">{children}</div>
       <div aria-hidden="true" className="absolute border border-[#bdbdbd] border-solid inset-0 pointer-events-none rounded-[4px]" />
@@ -77,24 +77,24 @@ export default function Frame() {
   };
 
   return (
-    <div className="content-stretch flex flex-col gap-[60px] items-center relative size-full">
+    <div className="content-stretch flex flex-col gap-[40px] md:gap-[60px] items-center relative size-full">
       <div className="content-stretch flex flex-col gap-[16px] items-center relative shrink-0 w-full">
         <div className="relative rounded-[8px] shrink-0 w-full">
           <div aria-hidden="true" className="absolute border border-[#bdbdbd] border-solid inset-0 pointer-events-none rounded-[8px]" />
           <div className="size-full">
-            <div className="content-stretch flex flex-col gap-[24px] items-start relative w-full p-[24px] mt-[0px] mr-[0px] mb-[0px] ml-[0px] m-[0px]">
+            <div className="content-stretch flex flex-col gap-[16px] md:gap-[24px] items-start relative w-full p-[16px] md:p-[24px] mt-[0px] mr-[0px] mb-[0px] ml-[0px] m-[0px]">
               <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-name="텍스트필드로 처리">
                 <textarea
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   placeholder={typingText || "Please enter a message."}
-                  className="font-['Pretendard:Medium',sans-serif] leading-[1.5] not-italic w-full text-[#ffffff] text-[22px] bg-transparent border-none outline-none resize-none min-h-[54px] placeholder:text-[#a78bfa]"
+                  className="font-['Pretendard:Medium',sans-serif] leading-[1.5] not-italic w-full text-[#ffffff] text-[16px] md:text-[22px] bg-transparent border-none outline-none resize-none min-h-[40px] md:min-h-[54px] placeholder:text-[#a78bfa]"
                 />
               </div>
               <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
-                <div className="content-stretch flex gap-[12px] items-center relative shrink-0">
+                <div className="content-stretch flex gap-[8px] md:gap-[12px] items-center relative shrink-0">
                   <div className="relative rounded-[4px] shrink-0" data-name="<IconButton>">
-                    <div className="content-stretch flex flex-col items-center justify-center overflow-clip p-[8px] relative rounded-[inherit]">
+                    <div className="content-stretch flex flex-col items-center justify-center overflow-clip p-[6px] md:p-[8px] relative rounded-[inherit]">
                       <div className="content-stretch flex items-start relative shrink-0" data-name="<Icon>">
                         <Wrapper1>
                           <g id="TuneRounded">
@@ -106,7 +106,7 @@ export default function Frame() {
                     <div aria-hidden="true" className="absolute border border-[#bdbdbd] border-solid inset-0 pointer-events-none rounded-[4px]" />
                   </div>
                   <div className="bg-[rgba(130,93,252,0.04)] relative rounded-[4px] shrink-0" data-name="<IconButton>">
-                    <div className="content-stretch flex flex-col items-center justify-center overflow-clip p-[8px] relative rounded-[inherit]">
+                    <div className="content-stretch flex flex-col items-center justify-center overflow-clip p-[6px] md:p-[8px] relative rounded-[inherit]">
                       <div className="content-stretch flex items-start relative shrink-0" data-name="<Icon>">
                         <Wrapper1>
                           <g id="TipsAndUpdatesOutlined">
@@ -118,7 +118,7 @@ export default function Frame() {
                     <div aria-hidden="true" className="absolute border border-[#825dfc] border-solid inset-0 pointer-events-none rounded-[4px]" />
                   </div>
                 </div>
-                <div className="bg-[#9e9e9e] content-stretch flex flex-col items-center justify-center overflow-clip p-[8px] relative rounded-[4px] shrink-0" data-name="<IconButton>">
+                <div className="bg-[#9e9e9e] content-stretch flex flex-col items-center justify-center overflow-clip p-[6px] md:p-[8px] relative rounded-[4px] shrink-0" data-name="<IconButton>">
                   <div className="content-stretch flex items-start relative shrink-0" data-name="<Icon>">
                     <Wrapper1>
                       <g id="ArrowUpwardFilled_none">
@@ -131,53 +131,53 @@ export default function Frame() {
             </div>
           </div>
         </div>
-        <div className="content-stretch flex gap-[16px] items-center relative shrink-0">
+        <div className="content-stretch flex flex-col md:flex-row flex-wrap gap-[12px] md:gap-[16px] items-stretch md:items-center justify-center relative shrink-0 w-full md:w-auto">
           <Button onClick={() => setInputValue(exampleQuestions.db)}>
-            <div className="content-stretch flex gap-[8px] items-center justify-center relative shrink-0" data-name="Base">
-              <div className="h-[24px] min-h-[24px] relative shrink-0 w-[18px]" data-name="Masked Icon">
+            <div className="content-stretch flex gap-[6px] md:gap-[8px] items-center justify-center relative shrink-0 w-full" data-name="Base">
+              <div className="h-[20px] md:h-[24px] min-h-[20px] md:min-h-[24px] relative shrink-0 w-[15px] md:w-[18px]" data-name="Masked Icon">
                 <Wrapper>
                   <g id="Icon Left">
                     <path d={svgPaths.p3293d100} fill="var(--fill-0, white)" fillOpacity="0.7" id="Vector" />
                   </g>
                 </Wrapper>
               </div>
-              <p className="font-['Pretendard:Medium',sans-serif] leading-[26px] not-italic relative shrink-0 text-[15px] text-[rgba(255,255,255,0.7)] text-nowrap tracking-[0.46px] uppercase">DB question</p>
+              <p className="font-['Pretendard:Medium',sans-serif] leading-[20px] md:leading-[26px] not-italic relative shrink-0 text-[13px] md:text-[15px] text-[rgba(255,255,255,0.7)] text-nowrap tracking-[0.46px] uppercase">DB question</p>
             </div>
           </Button>
           <Button onClick={() => setInputValue(exampleQuestions.document)}>
-            <div className="content-stretch flex gap-[8px] items-center justify-center relative shrink-0" data-name="Base">
-              <div className="h-[24px] min-h-[24px] relative shrink-0 w-[18px]" data-name="Masked Icon">
+            <div className="content-stretch flex gap-[6px] md:gap-[8px] items-center justify-center relative shrink-0 w-full" data-name="Base">
+              <div className="h-[20px] md:h-[24px] min-h-[20px] md:min-h-[24px] relative shrink-0 w-[15px] md:w-[18px]" data-name="Masked Icon">
                 <Wrapper>
                   <g id="LibraryBooksOutlined">
                     <path d={svgPaths.p6f19180} fill="var(--fill-0, white)" fillOpacity="0.7" id="Vector" />
                   </g>
                 </Wrapper>
               </div>
-              <p className="font-['Pretendard:Medium',sans-serif] leading-[26px] not-italic relative shrink-0 text-[15px] text-[rgba(255,255,255,0.7)] text-nowrap tracking-[0.46px] uppercase">Document question</p>
+              <p className="font-['Pretendard:Medium',sans-serif] leading-[20px] md:leading-[26px] not-italic relative shrink-0 text-[13px] md:text-[15px] text-[rgba(255,255,255,0.7)] text-nowrap tracking-[0.46px] uppercase">Document question</p>
             </div>
           </Button>
           <Button onClick={() => setInputValue(exampleQuestions.email)}>
-            <div className="content-stretch flex gap-[8px] items-center justify-center relative shrink-0" data-name="Base">
-              <div className="h-[24px] min-h-[24px] relative shrink-0 w-[18px]" data-name="Masked Icon">
+            <div className="content-stretch flex gap-[6px] md:gap-[8px] items-center justify-center relative shrink-0 w-full" data-name="Base">
+              <div className="h-[20px] md:h-[24px] min-h-[20px] md:min-h-[24px] relative shrink-0 w-[15px] md:w-[18px]" data-name="Masked Icon">
                 <Wrapper>
                   <g id="MailOutlineOutlined">
                     <path d={svgPaths.p1aad61c0} fill="var(--fill-0, white)" fillOpacity="0.7" id="Vector" />
                   </g>
                 </Wrapper>
               </div>
-              <p className="font-['Pretendard:Medium',sans-serif] leading-[26px] not-italic relative shrink-0 text-[15px] text-[rgba(255,255,255,0.7)] text-nowrap tracking-[0.46px] uppercase">Email question</p>
+              <p className="font-['Pretendard:Medium',sans-serif] leading-[20px] md:leading-[26px] not-italic relative shrink-0 text-[13px] md:text-[15px] text-[rgba(255,255,255,0.7)] text-nowrap tracking-[0.46px] uppercase">Email question</p>
             </div>
           </Button>
           <Button onClick={() => setInputValue(exampleQuestions.faq)}>
-            <div className="content-stretch flex gap-[8px] items-center justify-center relative shrink-0" data-name="Base">
-              <div className="h-[24px] min-h-[24px] relative shrink-0 w-[18px]" data-name="Masked Icon">
+            <div className="content-stretch flex gap-[6px] md:gap-[8px] items-center justify-center relative shrink-0 w-full" data-name="Base">
+              <div className="h-[20px] md:h-[24px] min-h-[20px] md:min-h-[24px] relative shrink-0 w-[15px] md:w-[18px]" data-name="Masked Icon">
                 <Wrapper>
                   <g id="HelpCenterOutlined">
                     <path d={svgPaths.p2c7d3310} fill="var(--fill-0, white)" fillOpacity="0.7" id="Vector" />
                   </g>
                 </Wrapper>
               </div>
-              <p className="font-['Pretendard:Medium',sans-serif] leading-[26px] not-italic relative shrink-0 text-[15px] text-[rgba(255,255,255,0.7)] text-nowrap tracking-[0.46px] uppercase">FAQ question</p>
+              <p className="font-['Pretendard:Medium',sans-serif] leading-[20px] md:leading-[26px] not-italic relative shrink-0 text-[13px] md:text-[15px] text-[rgba(255,255,255,0.7)] text-nowrap tracking-[0.46px] uppercase">FAQ question</p>
             </div>
           </Button>
         </div>
